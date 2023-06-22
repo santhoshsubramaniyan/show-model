@@ -1,0 +1,109 @@
+/* select a font */
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+:root {
+  --clr-sky-blue: #8ecae6ff;
+  --clr-blue-green: #219ebcff;
+  --clr-prussian-blue: #023047ff;
+  --clr-selective-yellow: #ffb703ff;
+  --clr-ut-orange: #fb8500ff;
+  --ff-roboto: "Roboto", sans-serif;
+  --ff-noto-sans: "Noto Sans", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  --max-width: 1170px;
+  --fixed-width: 450px;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--ff-roboto);
+}
+
+
+body {
+  background: url(../images/bricks-459299_640.jpg);
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+}
+
+.btn {
+  padding: 0.75rem 1rem;
+  border-radius: 2px soild var(--clr-blue-green);
+  background-color: var(--clr-blue-green);
+  border-radius: var(--radius);
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: var(--clr-ut-orange);
+  margin: 0 0.45rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  z-index: 11;
+  margin-top: 3rem;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+}
+
+.card {
+  width: 60%;
+  background-color: var(--clr-selective-yellow);
+  padding: 0.65rem;
+  border-radius: var(--radius);
+  box-shadow: var(--dark-shadow);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+  /* display: none; */
+}
+
+.title {
+  font-size: 1.25rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn-close-modal {
+  height: 1.5rem;
+  width: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 900;
+  cursor: pointer;
+  border: none;
+  background-color: var(--clr-prussian-blue);
+  color: var(--clr-ut-orange);
+  border-radius: 60%;
+
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
